@@ -1,0 +1,316 @@
+<!--
+  * Aincrad theme 1.0 by : seraphinush
+  *
+  * strictly no removing of credits, leave at least one link to my repo
+  * you cannot use this as your base code
+  * no theme redistribution otherwise through my repo
+  *
+  * revision log :
+  *   2015.06.13 : first edit
+  *   2015.06.19 : reworked infobox for like and reblog with tumblr custom icons, added info for all post types necessary
+  *   2015.06.21 : added footer
+  *   2015.06.22 : started working on nav menu
+  *   2015.06.29 : version 1.0 complete; bug fixes
+-->
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    var menuOpen = false
+
+    $(document).ready(function () {
+      $(document).click(function (e) {
+        if ($("#icon img").is(e.target)) {
+          if (!menuOpen) {
+            $("#menu").slideDown()
+            setTimeout(() => { $("#menu_2").show() }, 600);
+            menuOpen = true
+          }
+          else {
+            $("#link").slideUp()
+            setTimeout(() => { $("#menu").slideUp() }, 400)
+            menuOpen = false
+          }
+        }
+
+        else if (menuOpen && (!$("#menu").is(e.target) || !$("#menu_2").is(e.target) || !$("#link").is(e.target))) {
+          $("#link").slideUp()
+          setTimeout(() => { $("#menu").slideUp() }, 400)
+          menuOpen = false
+        }
+      })
+
+      $("#menu_2").mouseover(function () {
+        $("#link").slideDown()
+      })
+
+      $(document).scroll(function () {
+        $("#link").slideUp()
+        setTimeout(() => { $("#menu").slideUp() }, 400)
+        menuOpen = false
+      })
+    })
+  </script>
+
+  <title>Theme 01, Aincrad</title>
+
+  <!-- variables -->
+  <meta name="image:Nav icon" content="res/nav.png" />
+  <meta name="image:Background" content="res/background.png" />
+
+  <meta name="text:Username" content="Seraphinush" />
+  <meta name="text:Hp" content="1000" />
+  <meta name="text:Level" content="65" />
+
+  <meta name="color:Background color" content="#99CCFF" />
+  <meta name="color:Post title" content="#000" />
+  <meta name="color:Text" content="#000" />
+
+  <meta name="color:Links" content="#2952A3" />
+  <meta name="color:Links hover" content="#7094DB" />
+
+  <meta name="color:Ask background" content="#FFFFFF" />
+
+  <meta name="color:Bold" content="#FF9900" />
+  <meta name="color:Italics" content="#4C4C4C" />
+  <meta name="color:Underlined" content="#FF9900" />
+
+  <meta name="text:Font size" content="11.2" />
+
+  <META name="text:Menu 1" content="Index" />
+  <META name="text:Menu 1 url" content="/index" />
+  <META name="text:Menu 3" content="Ask" />
+  <META name="text:Menu 3 url" content="/ask" />
+  <META name="text:Menu 4" content="Random" />
+  <META name="text:Menu 4 url" content="/random" />
+  <META name="text:Menu 5" content="Archive" />
+  <META name="text:Menu 5 url" content="/archive" />
+
+  <META name="text:Link 1" content="Link 1" />
+  <META name="text:Link 1 url" content="/" />
+  <META name="text:Link 2" content="Link 2" />
+  <META name="text:Link 2 url" content="/" />
+  <META name="text:Link 3" content="Link 3" />
+  <META name="text:Link 3 url" content="/" />
+  <META name="text:Link 4" content="Link 4" />
+  <META name="text:Link 4 url" content="/" />
+  <META name="text:Link 5" content="Link 5" />
+  <META name="text:Link 5 url" content="/" />
+
+  <meta name="if:Fading images" content="1" />
+  <meta name="if:Infinite scroll" content="0" />
+
+  <!-- styles -->
+  <link rel="stylesheet" href="main.css">
+
+  <!-- credits -->
+  <div id="cr">
+    <a href="index.html">
+      <img src="res/name.png" width="50px" height="50px" />
+    </a>
+  </div>
+
+  <!-- pagination -->
+  <div id="footer">
+    <div class="left"><a href="{PreviousPage}">PREV</a></div>
+    <div class="right"><a href="{NextPage}">NEXT</a></div>
+  </div>
+
+</head>
+
+<body>
+
+  <div id="sidebar">
+
+    <div id="hpbar">
+      <div id="icon">
+        <a href="#menu"><img src="res/nav.png" width="25px" height="25px" title="MENU" /></a>
+      </div>
+      <div class="name">
+        <a href="#" title="HOME">Seraphinush</a>
+      </div>
+      <div id="hp">
+        <span class="left">1000</span>/<span class="right">1000</span>
+      </div>
+      <div id="level">
+        <span class="left">Lv.</span><span class="right">1</span>
+      </div>
+    </div>
+
+    <div id="search">
+      <span class="name">Search</span>
+      <form action="/search" method="get" class="sfm">
+        <input type="text" name="q" value="" id="sf" />
+      </form>
+    </div>
+
+    <div id="link">
+      <a id="link_1" href="#">&nbsp;&nbsp;&nbsp;&nbsp;Link 1</a>
+      <a id="link_2" href="#">&nbsp;&nbsp;&nbsp;&nbsp;Link 2</a>
+      <a id="link_3" href="#">&nbsp;&nbsp;&nbsp;&nbsp;Link 3</a>
+      <a id="link_4" href="#">&nbsp;&nbsp;&nbsp;&nbsp;Link 4</a>
+      <a id="link_5" href="#">&nbsp;&nbsp;&nbsp;&nbsp;Link 5</a>
+    </div>
+
+    <div id="menu">
+      <span id="title">Seraphinush</span>
+      <span id="description">Description here</span>
+      <div id="menulink">
+        <a id="menu_1" href="#"><span class="menu_name">Home</span></a>
+        <a id="menu_2" href="#link">Links</a>
+        <a id="menu_3" href="#"><span class="menu_name">Ask</span></a>
+        <a id="menu_4" href="#"><span class="menu_name">Archive</span></a>
+        <a id="menu_5" href="#"><span class="menu_name">Random</span></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="content">
+
+    <!-- post types -->
+    <div class="box">
+      <div class="h1">Theme 01, Aincrad</div>
+
+<pre>Aincrad theme 1.0 by : seraphinush
+
+* strictly no removing of credits, leave at least one Link to my blog*
+* you cannot use this as your base code*
+* no theme redistribution otherwise through my blog*
+
+* features :
+*   400px content size
+*   customizable ign name, hp, & lvl
+*   customizable guild logo
+*   search query
+*   5 customizable links
+
+* revision log :
+*   2015.06.13 : first edit
+*   2015.06.19 : reworked infobox for like and reblog with tumblr custom icons, added info for all post types necessary
+*   2015.06.21 : added footer
+*   2015.06.22 : started working on nav menu
+*   2015.06.29 : version 1.0 complete; bugs & fixes
+
+<a href="theme.txt">source</a></pre>
+
+    </div>
+    <div class="tag">
+      <img src="res/tag.svg" width="6" height="6" />
+      <a href="#">#info</a>
+    </div>
+    <div class="infobox">
+      2015.10.12 |
+      <a href="#">0 notes</a> |
+      <div class="custom_button">
+        <div class="like_button">{LikeButton}</div>
+        <div class="our_button">&hearts;</div>
+      </div> |
+      <span title="reblog me"><img src="res/reblog.svg" width="8" style="display: inline;" /></span>
+    </div>
+
+
+    <div class="box">
+      <div class="quote">"Let justice be done though the heavens fall"</div>
+      <div class="quotesource">— Unknown</div>
+      <hr />
+      Additional comments
+    </div>
+    <div class="tag">
+      <img src="res/tag.svg" width="6" height="6" />
+      <a href="#">#quote</a>
+    </div>
+    <div class="infobox">
+      2015.10.12 |
+      <a href="#">0 notes</a> |
+      <div class="custom_button">
+        <div class="like_button">{LikeButton}</div>
+        <div class="our_button">&hearts;</div>
+      </div> |
+      <span title="reblog me"><img src="res/reblog.svg" width="8" style="display: inline;" /></span>
+    </div>
+
+
+    <div class="box">
+      <div class="askbox">
+        <div class="ask"><span>Seraph asked :<br /></span>
+          <p>If a tree fell in the forest...</p>
+        </div>
+      </div>
+      <div class="answer">Does it make a sound?</div>
+    </div>
+    <div class="tag">
+      <img src="res/tag.svg" width="6" height="6" />
+      <a href="#">#question</a>
+    </div>
+    <div class="infobox">
+      2015.10.12 |
+      <a href="#">0 notes</a> |
+      <div class="custom_button">
+        <div class="like_button">{LikeButton}</div>
+        <div class="our_button">&hearts;</div>
+      </div> |
+      <span title="reblog me"><img src="res/reblog.svg" width="8" style="display: inline;" /></span>
+    </div>
+
+
+    <div class="box">
+      <div class="track"></div>
+      <div class="albumimg">
+        <img src="{AlbumArtURL}" width="70" />
+      </div>
+
+      <div class="trackid">Track : </div>
+      <div class="trackid">Artist : </div>
+
+      <hr />
+      Additional comments
+    </div>
+    <div class="tag">
+      <img src="res/tag.svg" width="6" height="6" />
+      <a href="#">#audio</a>
+    </div>
+    <div class="infobox">
+      2015.10.12 |
+      <a href="#">0 notes</a> |
+      <div class="custom_button">
+        <div class="like_button">{LikeButton}</div>
+        <div class="our_button">&hearts;</div>
+      </div> |
+      <span title="reblog me"><img src="res/reblog.svg" width="8" style="display: inline;" /></span>
+    </div>
+
+
+    <div class="box">
+      <center>
+        <!-- sample video -->
+        <iframe width="400" height="300" src="https://www.youtube.com/embed/YBGLlfkJaLw" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </center>
+      <hr />
+      Additional comments
+    </div>
+    <div class="tag">
+      <img src="res/tag.svg" width="6" height="6" />
+      <a href="#">#video</a>
+    </div>
+    <div class="infobox">
+      2015.10.12 |
+      <a href="#">0 notes</a> |
+      <div class="custom_button">
+        <div class="like_button">{LikeButton}</div>
+        <div class="our_button">&hearts;</div>
+      </div> |
+      <span title="reblog me"><img src="res/reblog.svg" width="8" style="display: inline;" /></span>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
