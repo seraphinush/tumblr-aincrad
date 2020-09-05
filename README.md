@@ -1,7 +1,7 @@
 # tumblr-aincrad
 Tumblr theme based on Aincrad from Sword Art Online
 
-[Demo](seraphinush.github.io/tumblr-aincrad)
+[Demo](https://seraphinush.github.io/tumblr-aincrad)
 
 ## Setup
 Copy-paste all code in [`theme.txt`](theme.txt) into `Edit HTML` option in Tumblr
