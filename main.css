@@ -123,11 +123,11 @@ body {
 pre {
   font-size: var(--text-size);
   font-family: inconsolata, consolas, courier new, monospace;
-  white-space: pre-wrap;       /* css-3 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* mozilla, since 1999 */
+  white-space: -pre-wrap; /* opera 4-6 */
+  white-space: -o-pre-wrap; /* opera 7 */
+  word-wrap: break-word; /* internet explorer 5.5+ */
 }
 
 #content {
@@ -709,7 +709,7 @@ input:focus {
   height: 20px;
   line-height: 20px;
   background: rgba(255, 255, 255, 0.7);
-  font-size: 11.2px;
+  font-size: var(--text-size);
 }
 
 .albumimg {

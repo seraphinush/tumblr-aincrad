@@ -16,10 +16,7 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
   <script>
     var menuOpen = false
 
@@ -46,7 +43,8 @@
       })
 
       $("#menu_2").mouseover(function () {
-        $("#link").slideDown()
+        if (menuOpen)
+          $("#link").slideDown()
       })
 
       $(document).scroll(function () {
@@ -102,9 +100,6 @@
   <META name="text:Link 5" content="Link 5" />
   <META name="text:Link 5 url" content="/" />
 
-  <meta name="if:Fading images" content="1" />
-  <meta name="if:Infinite scroll" content="0" />
-
   <!-- styles -->
   <link rel="stylesheet" href="main.css">
 
@@ -117,8 +112,8 @@
 
   <!-- pagination -->
   <div id="footer">
-    <div class="left"><a href="{PreviousPage}">PREV</a></div>
-    <div class="right"><a href="{NextPage}">NEXT</a></div>
+    <div class="left"><a href="#">PREV</a></div>
+    <div class="right"><a href="#">NEXT</a></div>
   </div>
 
 </head>
@@ -179,23 +174,23 @@
 
 <pre>Aincrad theme 1.0 by : seraphinush
 
-* strictly no removing of credits, leave at least one Link to my blog*
-* you cannot use this as your base code*
-* no theme redistribution otherwise through my blog*
+* strictly no removing of credits, leave at least one link to my repo
+* you cannot use this as your base code
+* no theme redistribution otherwise through my repo
 
-* features :
-*   400px content size
-*   customizable ign name, hp, & lvl
-*   customizable guild logo
-*   search query
-*   5 customizable links
+features :
+* 400px content size
+* customizable ign name, hp, & lvl
+* customizable guild logo
+* search query
+* 5 customizable links
 
-* revision log :
-*   2015.06.13 : first edit
-*   2015.06.19 : reworked infobox for like and reblog with tumblr custom icons, added info for all post types necessary
-*   2015.06.21 : added footer
-*   2015.06.22 : started working on nav menu
-*   2015.06.29 : version 1.0 complete; bugs & fixes
+revision log :
+* 2015.06.13 : first edit
+* 2015.06.19 : reworked infobox for like and reblog with tumblr custom icons, added info for all post types necessary
+* 2015.06.21 : added footer
+* 2015.06.22 : started working on nav menu
+* 2015.06.29 : version 1.0 complete; bug fixes
 
 <a href="theme.txt">source</a></pre>
 
@@ -213,7 +208,6 @@
       </div> |
       <span title="reblog me"><img src="res/reblog.svg" width="8" style="display: inline;" /></span>
     </div>
-
 
     <div class="box">
       <div class="quote">"Let justice be done though the heavens fall"</div>
@@ -234,7 +228,6 @@
       </div> |
       <span title="reblog me"><img src="res/reblog.svg" width="8" style="display: inline;" /></span>
     </div>
-
 
     <div class="box">
       <div class="askbox">
@@ -257,7 +250,6 @@
       </div> |
       <span title="reblog me"><img src="res/reblog.svg" width="8" style="display: inline;" /></span>
     </div>
-
 
     <div class="box">
       <div class="track"></div>
@@ -284,7 +276,6 @@
       </div> |
       <span title="reblog me"><img src="res/reblog.svg" width="8" style="display: inline;" /></span>
     </div>
-
 
     <div class="box">
       <center>
