@@ -7,7 +7,7 @@ Tumblr theme based on Aincrad's in-game UI from Sword Art Online
 Copy-paste all code in [`theme.txt`](theme.txt) into `Edit HTML` option in Tumblr
 
 # Theme options
-```html
+```
 image:Nav icon
 image:Background
 
