@@ -61,4 +61,4 @@ text:Link 5 url
 ## License
 Copyright 2015 Seraphinus Hong
 
-Released under [MIT License](LICENSE)
+Released under the [MIT License](LICENSE)
