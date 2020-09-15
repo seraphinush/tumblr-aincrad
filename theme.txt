@@ -17,46 +17,8 @@
 <html>
 
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    var menuOpen = false
 
-    $(document).ready(function () {
-      $(document).click(function (e) {
-        if ($("#icon img").is(e.target)) {
-          if (!menuOpen) {
-            $("#menu").slideDown()
-            setTimeout(() => { $("#menu_2").show() }, 600);
-            menuOpen = true
-          }
-          else {
-            $("#link").slideUp()
-            setTimeout(() => { $("#menu").slideUp() }, 400)
-            menuOpen = false
-          }
-        }
-
-        else if (menuOpen && (!$("#menu").is(e.target) || !$("#menu_2").is(e.target) || !$("#link").is(e.target))) {
-          $("#link").slideUp()
-          setTimeout(() => { $("#menu").slideUp() }, 400)
-          menuOpen = false
-        }
-      })
-
-      $("#menu_2").mouseover(function () {
-        if (menuOpen)
-          $("#link").slideDown()
-      })
-
-      $(document).scroll(function () {
-        $("#link").slideUp()
-        setTimeout(() => { $("#menu").slideUp() }, 400)
-        menuOpen = false
-      })
-    })
-  </script>
-
-  <title>Theme 01, Aincrad</title>
+  <title>{Title}</title>
 
   <Link rel="shortcut icon" href="{Favicon}">
   <Link rel="alternate" type="application/rss+xml" href="{RSS}">
@@ -65,10 +27,8 @@
   {/block:Description}
 
   <!-- variables -->
-  <meta name="image:Nav icon"
-    content="https://raw.githubusercontent.com/seraphinush/tumblr-aincrad/master/res/nav.png" />
-  <meta name="image:Background"
-    content="https://raw.githubusercontent.com/seraphinush/tumblr-aincrad/master/res/background.png" />
+  <meta name="image:Nav icon" content="https://raw.githubusercontent.com/seraphinush/tumblr-aincrad/master/res/nav.png" />
+  <meta name="image:Background" content="https://raw.githubusercontent.com/seraphinush/tumblr-aincrad/master/res/background.png" />
 
   <meta name="text:Username" content="Seraphinush" />
   <meta name="text:Hp" content="1000" />
@@ -108,6 +68,45 @@
   <META name="text:Link 4 url" content="/" />
   <META name="text:Link 5" content="Link 5" />
   <META name="text:Link 5 url" content="/" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    var menuOpen = false
+
+    $(document).ready(function () {
+      $(document).click(function (e) {
+        if ($("#icon img").is(e.target)) {
+          if (!menuOpen) {
+            $("#menu").slideDown()
+            setTimeout(() => { $("#menu_2").show() }, 600);
+            menuOpen = true
+          }
+          else {
+            $("#link").slideUp()
+            setTimeout(() => { $("#menu").slideUp() }, 400)
+            menuOpen = false
+          }
+        }
+
+        else if (menuOpen && (!$("#menu").is(e.target) || !$("#menu_2").is(e.target) || !$("#link").is(e.target))) {
+          $("#link").slideUp()
+          setTimeout(() => { $("#menu").slideUp() }, 400)
+          menuOpen = false
+        }
+      })
+
+      $("#menu_2").mouseover(function () {
+        if (menuOpen)
+          $("#link").slideDown()
+      })
+
+      $(document).scroll(function () {
+        $("#link").slideUp()
+        setTimeout(() => { $("#menu").slideUp() }, 400)
+        menuOpen = false
+      })
+    })
+  </script>
 
   <!-- styles -->
   <style type="text/css">
